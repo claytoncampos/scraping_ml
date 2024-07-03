@@ -5,6 +5,8 @@ class MlSpider(scrapy.Spider):
     name = "ml"
     allowed_domains = ["lista.mercadolivre.com.br"]
     start_urls = ["https://lista.mercadolivre.com.br/fralda"]
+    page_count = 1
+    max_pages =10
 
     def parse(self, response):
         products = response.css('div.ui-search-result__content')
@@ -23,3 +25,9 @@ class MlSpider(scrapy.Spider):
                 'reviews_rating_number' : product.css('span.ui-search-reviews__rating-number::text').get(),
                 'reviews_amount' : product.css('span.ui-search-reviews__amount::text').get()
             }
+
+        if self.page_count < self.max_pages:
+            next_page = response.css('li.andes-pagination__button.andes-pagination__button--next a::attr(href)').get()
+            if next_page:
+                self.page_count += 1
+                yield scrapy.Request(url=next_page, callback=self.parse)
