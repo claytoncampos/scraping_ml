@@ -1,15 +1,29 @@
 # scraping_ml
 
-Para rodar o web scraping
+### Para rodar o web scraping 
 
+#### para rodar o crawl da Coleta de fraldas
 ```
 cd /scraping_ml/src/coleta_ml
-scrapy crawl ml -o /mnt/projetos/scraping_ml/data/data.json  
+scrapy crawl coleta_fralda_ml -o scraping_ml/data/data.json  
+```
+
+#### para rodar o crawl da Coleta de tenis
+```
+cd /scraping_ml/src/coleta_ml
+scrapy crawl coleta_fralda_ml -o scraping_ml/data/data.json  
 
 ```
 
-Para rodar o pandas precisa estart dentro da pasta SRC
+#### Para rodar o pandas para fazer as tranformações precisa estar dentro da pasta SRC
 ```
 cd /scraping_ml/src/
-python trasnsformacao/main.py
+python trasnsformacao/transform_fralda.py
+python trasnsformacao/transform_tenis.py
 ```
+
+Ao rodar o scrapping e as transformações você tera um banco de dados (quotes.db)
+Dentro do banco terá as 2 tabelas criadas (mercadolivre_fraldas e mercadolivre_tenis) 
+
+
+
