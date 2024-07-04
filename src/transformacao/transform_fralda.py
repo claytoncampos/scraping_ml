@@ -4,7 +4,7 @@ from datetime import datetime
 
 # Definir o caminho para o arquivo JSONL
 
-df = pd.read_json('../data/data.jsonl', lines=True)
+df = pd.read_json('../../data/fralda.jsonl', lines=True)
 
 # setar o pandar para mostrar todas as colunas
 
@@ -39,12 +39,12 @@ df['new_price'] = df['new_price_reais'] + (df['new_price_centavos'] / 100)
 
 # Remover as colunas antigas de preços
 
-df.drop(columns=['old_price_reais', 'old_price_centavos', 'new_price_reais', 'new_price_centavos'])
+df.drop(columns=['old_price_reais', 'old_price_centavos', 'new_price_reais', 'new_price_centavos'], inplace=True)
 
 
 # Conectar ao banco de dados SQLite (ou criar um novo)
 
-conn = sqlite3.connect('../data/quotes.db')
+conn = sqlite3.connect('../../data/quotes.db')
 
 # Salvar o DataFrame no banco de dados SQLite
 

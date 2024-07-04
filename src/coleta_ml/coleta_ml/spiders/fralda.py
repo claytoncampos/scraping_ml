@@ -2,7 +2,7 @@ import scrapy
 
 
 class MlSpider(scrapy.Spider):
-    name = "ml"
+    name = "coleta_fralda_ml"
     allowed_domains = ["lista.mercadolivre.com.br"]
     start_urls = ["https://lista.mercadolivre.com.br/fralda"]
     page_count = 1

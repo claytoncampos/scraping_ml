@@ -2,7 +2,7 @@ import scrapy
 
 
 class MercadolivreSpider(scrapy.Spider):
-    name = "tenis"
+    name = "coleta_tenis_ml"
     start_urls = ["https://lista.mercadolivre.com.br/tenis-corrida-masculino"]
     page_count = 1
     max_pages = 10
