@@ -1,5 +1,6 @@
 # scraping_ml
 
+
 ### Para rodar o web scraping 
 
 #### para rodar o crawl da Coleta de fraldas
@@ -35,3 +36,5 @@ cd /scraping_ml/src/
 streamlit run dashboard/app.py   
 
 ```
+
+<img src="/data/projeto.png">
