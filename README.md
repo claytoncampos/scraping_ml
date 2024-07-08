@@ -27,3 +27,9 @@ Dentro do banco terá as 2 tabelas criadas (mercadolivre_fraldas e mercadolivre_
 
 
 
+#### para rodar o Streamlit precisa executar o comando abaixo dentro da pasta SRC
+```
+cd /scraping_ml/src/
+streamlit run dashboard/app.py   
+
+```
