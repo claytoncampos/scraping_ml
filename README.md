@@ -22,8 +22,10 @@ python trasnsformacao/transform_fralda.py
 python trasnsformacao/transform_tenis.py
 ```
 
-Ao rodar o scrapping e as transformações você tera um banco de dados (quotes.db)
-Dentro do banco terá as 2 tabelas criadas (mercadolivre_fraldas e mercadolivre_tenis) 
+Ao rodar o scrapping e as transformações você tera um banco de dados (quotes.db) <br>
+Dentro do banco terá as 2 tabelas criadas:
+* mercadolivre_fraldas
+* mercadolivre_tenis 
 
 
 
