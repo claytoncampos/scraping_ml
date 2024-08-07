@@ -3,8 +3,12 @@ import pandas as pd
 import sqlite3
 
 
-# Conectar ao banco de dados SQLite
-conn = sqlite3.connect('/mnt/projetos/scraping_ml/data/quotes.db')
+# Conectar ao banco de dados SQLite (local)
+# conn = sqlite3.connect('/mnt/projetos/scraping_ml/data/quotes.db')
+
+#streamlit deploy
+conn = sqlite3.connect('data/quotes.db')
+
 
 # carregar os dados da tabela 'mercadolivre_tenis' em um DataFrame pandas
 df = pd.read_sql_query('Select * from  mercadolivre_tenis', conn)
