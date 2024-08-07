@@ -38,3 +38,6 @@ streamlit run dashboard/app.py
 ```
 
 <img src="/data/projeto.png">
+
+### Deploy Steamlit Demo
+https://scrapingml.streamlit.app/
